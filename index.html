@@ -15,9 +15,7 @@
         <div class="logo">
             <img alt="vinyl_wave" height="100" src="pic/logo.png" width="100"/>
         </div>
-        <div class="site-name">
-            Vinyl Wave
-        </div>
+        <h1 class="site-name">Vinyl Wave</h1>
         <div class="search">
             <label>
                 <input placeholder="Поиск" type="text"/>
@@ -40,13 +38,13 @@
 </header>
 
 <main>
-    <div class="content">
-        <div class="category">
+    <section class="content">
+        <aside class="category">
             <a href="#">
-                Инди/Альтернатива
+                <h4>Инди/Альтернатива</h4>
             </a>
-        </div>
-        <div class="product">
+        </aside>
+        <article class="product">
             <img alt="Aeroplane-Over-Neutral-Milk-Hotel" height="200"
                  src="pic/covers/Aeroplane-Over-Neutral-Milk-Hotel.png" width="200"/>
             <div class="name">
@@ -55,8 +53,8 @@
             <div class="price">
                 4000 ₽
             </div>
-        </div>
-        <div class="product">
+        </article>
+        <article class="product">
             <img alt="Diary-Sunny-Day" height="200" src="pic/covers/Diary-Sunny-Day.png" width="200"/>
             <div class="name">
                 Sunny Day Real Estate - Diary (2LP)
@@ -64,8 +62,8 @@
             <div class="price">
                 6000 ₽
             </div>
-        </div>
-        <div class="product">
+        </article>
+        <article class="product">
             <img alt="In-Rainbows-Radiohead" height="200" src="pic/covers/In-Rainbows-Radiohead.png" width="200"/>
             <div class="name">
                 Radiohead - In Rainbows (LP)
@@ -73,8 +71,8 @@
             <div class="price">
                 5000 ₽
             </div>
-        </div>
-        <div class="product">
+        </article>
+        <article class="product">
             <img alt="Twin-Fantasy-Car-Seat-Headrest" height="200" src="pic/covers/Twin-Fantasy-Car-Seat-Headrest.png"
                  width="200"/>
             <div class="name">
@@ -83,13 +81,13 @@
             <div class="price">
                 7800 ₽
             </div>
-        </div>
-        <div class="category">
+        </article>
+        <aside class="category">
             <a href="#">
-                Музыка для драки с братом
+                <h4>Музыка для драки с братом</h4>
             </a>
-        </div>
-        <div class="product">
+        </aside>
+        <article class="product">
             <img alt="Definitely-Maybe-Oasis" height="200" src="pic/covers/Definitely-Maybe-Oasis.png" width="200"/>
             <div class="name">
                 Oasis - Definitely Maybe (2LP)
@@ -97,8 +95,8 @@
             <div class="price">
                 4800 ₽
             </div>
-        </div>
-        <div class="product">
+        </article>
+        <article class="product">
             <img alt="Whats-The-Story-Oasis" height="200" src="pic/covers/Whats-The-Story-Oasis.png" width="200"/>
             <div class="name">
                 Oasis - (What's The Story) Morning Glory? (2LP)
@@ -106,8 +104,8 @@
             <div class="price">
                 4600 ₽
             </div>
-        </div>
-        <div class="product">
+        </article>
+        <article class="product">
             <img alt="Be-Here-Now-Oasis" height="200" src="pic/covers/Be-Here-Now-Oasis.png" width="200"/>
             <div class="name">
                 Oasis - Be Here Now (2LP)
@@ -115,8 +113,8 @@
             <div class="price">
                 5000 ₽
             </div>
-        </div>
-        <div class="product">
+        </article>
+        <article class="product">
             <img alt="Live-At-Knebworth-Oasis" height="200" src="pic/covers/Live-At-Knebworth-Oasis.png" width="200"/>
             <div class="name">
                 Oasis - Live At Knebworth (3LP)
@@ -124,13 +122,60 @@
             <div class="price">
                 4800 ₽
             </div>
-        </div>
-    </div>
+        </article>
+    </section>
 </main>
 
 <footer>
     <div class="footer">
-        ????????, ?????
+        <p>Почему мне нравится винил:</p>
+        <ol>
+            <li>Это очень дорого</li>
+            <li>Это дико неудобно</li>
+        </ol>
+        <ul>
+            <li>Это очень дорого</li>
+            <li>Это дико неудобно</li>
+        </ul>
+
+        <pre>
+                          /\          /\
+                         ( \\        // )
+                          \ \\      // /
+                           \_\\||||//_/
+                            \/ _  _ \
+                           \/|(O)(O)|
+                          \/ |      |
+      ___________________\/  \      /
+     //                //     |____|
+    //                ||     /      \
+   //|                \|     \ 0  0 /
+  // \       )         V    / \____/
+ //   \     /        (     /
+""     \   /_________|  |_/
+       /  /\   /     |  ||
+      /  / /  /      \  ||
+      | |  | |        | ||
+      | |  | |        | ||
+      |_|  |_|        |_||
+       \_\  \_\        \_\\
+        </pre>
+
+        <pre><code>
+class UpdateProgressBarServiceImpl : UpdateProgressBarService {
+    override fun updateProgressBar(progressBar: JProgressBar, value: Int) {
+        SwingUtilities.invokeLater {
+            progressBar.value = value
+        }
+    }
+}
+        </code></pre>
+
+        <blockquote>
+            <p>
+                <strong>Вещи</strong> тоже <em>живые</em>. <del>Надо только</del> уметь <b>разбудить</b> <ins>в них</ins> <i>душу</i>...
+            </p>
+        </blockquote>
     </div>
 </footer>
 </body>
