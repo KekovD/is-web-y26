@@ -6,6 +6,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    white-space: normal;
 }
 
 .header {
@@ -120,6 +121,10 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.category__title {
+    margin-left: 20px;
+}
+
 .category a {
     color: white;
     text-decoration: none;
@@ -128,6 +133,9 @@ body {
 
 .product {
     flex: 1 1 calc(20% - 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -135,6 +143,7 @@ body {
     padding: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    height: 400px;
 }
 
 .product:hover {
@@ -153,11 +162,34 @@ body {
     font-size: 1.2rem;
     margin: 10px 0;
     color: #333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    line-height: 1.2em;
+    min-height: 2.4em
+}
+
+.product a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .product__price {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.product__price-old {
+    text-decoration: line-through;
+    color: #999;
     font-size: 1rem;
+}
+
+.product__price-new {
     color: rgba(206, 22, 22, 0.66);
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -187,4 +219,10 @@ code {
     font-family: 'Courier New', monospace;
     padding: 5px;
     border-radius: 3px;
+}
+
+.footer__ulist {
+    text-decoration: underline;
+    letter-spacing: 2px;
+    line-height: 4;
 }
