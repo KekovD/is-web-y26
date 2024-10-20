@@ -37,7 +37,7 @@ body {
 }
 
 .header .search input {
-    width: 100%;
+    width: 75%;
     padding: 5px;
 }
 
@@ -112,6 +112,11 @@ body {
     padding: 10px;
     text-align: center;
     box-sizing: border-box;
+}
+
+.product a {
+    text-decoration: none;
+    color: black;
 }
 
 .product img {
