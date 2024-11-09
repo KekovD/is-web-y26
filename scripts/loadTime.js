@@ -1,14 +1,14 @@
-(function () {
-    window.addEventListener('load', function () {
-        const performanceEntries = performance.getEntriesByType("navigation");
+(function() {
+    const calculateLoadTime = () => (performance.now() / 1000).toFixed(3);
 
-        const navigationTiming = performanceEntries[0];
+    const displayLoadTime = () => {
+        const loadTime = calculateLoadTime();
+        const loadingTimeElement = document.getElementById('load-time-stat');
 
-        const loadTime = navigationTiming.loadEventEnd - navigationTiming.startTime;
+        if (loadingTimeElement) {
+            loadingTimeElement.textContent = `Время загрузки страницы: ${loadTime} сек`;
+        }
+    };
 
-        const loadTimeInSeconds = (loadTime / 1000).toFixed(4);
-        const loadTimeMessage = `Время загрузки страницы: ${loadTimeInSeconds} сек.`;
-
-        document.getElementById('load-time-stat').textContent = loadTimeMessage;
-    });
+    document.addEventListener('DOMContentLoaded', displayLoadTime);
 })();
