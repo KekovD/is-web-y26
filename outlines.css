@@ -113,7 +113,7 @@ body {
 }
 
 .category {
-    flex: 1 0 90%;
+    flex: 1 0 100%;
     margin-top: 20px;
     padding: 10px;
     background-color: rgba(206, 22, 22, 0.4);
@@ -137,7 +137,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border:  1px solid #ddd;
     border-radius: 10px;
     margin: 10px;
     padding: 15px;
@@ -166,7 +166,7 @@ body {
     overflow: hidden;
     -webkit-line-clamp: 2;
     line-height: 1.2em;
-    min-height: 2.4em
+    min-height: 2.4em;
 }
 
 .product a {
@@ -224,4 +224,28 @@ code {
     letter-spacing: 2px;
     line-height: 4;
     font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(35% - 30px);
+    }
+
+    .category {
+        flex: 1 0 100%;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product {
+        flex: 1 1 100%;
+    }
+
+    .footer {
+        display: none;
+    }
 }
