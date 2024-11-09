@@ -32,6 +32,16 @@ body {
     color: #fff;
 }
 
+.header__logo a, .header__site-name a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header__logo a:hover, .header__site-name a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 .header__search {
     flex: 1;
     text-align: right;
