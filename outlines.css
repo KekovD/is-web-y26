@@ -226,6 +226,12 @@ code {
     font-weight: bold;
 }
 
+.footer-banner {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 @media screen and (max-width: 768px) {
     .product {
         flex: 1 1 calc(35% - 30px);
@@ -238,14 +244,8 @@ code {
     .navigation {
         flex-direction: column;
     }
-}
 
-@media screen and (max-width: 480px) {
-    .product {
-        flex: 1 1 100%;
-    }
-
-    .footer {
+    .footer-banner {
         display: none;
     }
 }
