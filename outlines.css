@@ -243,7 +243,7 @@ code {
 }
 
 .table-section {
-    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .table {
@@ -288,6 +288,22 @@ code {
     background-color: rgba(206, 22, 22, 0.25);
 }
 
+.delivery-info {
+    margin-left: 25px;
+}
+
+.spacer {
+    height: 300px;
+}
+
+.table-title {
+    text-align: center;
+}
+
+.user-info {
+    margin-left: 50px;
+}
+
 @media screen and (max-width: 825px) {
     .product {
         flex: 1 1 calc(35% - 30px);
@@ -296,4 +312,113 @@ code {
     .footer-banner {
         display: none;
     }
+}
+
+.button {
+    background-color: rgba(206, 22, 22, 0.66);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.button:hover {
+    background-color: rgba(206, 22, 22, 0.66);
+    transform: scale(1.05);
+}
+
+.button:active {
+    background-color: rgba(206, 22, 22, 1);
+    transform: scale(0.98);
+}
+
+.logout {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cart-table-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cart-table-row {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-table-row:nth-child(3n-2),
+.cart-table-row:nth-child(3n-1),
+.cart-table-row:nth-child(3n) {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.cart-table-row:nth-child(6n-5),
+.cart-table-row:nth-child(6n-4),
+.cart-table-row:nth-child(6n-3) {
+    background-color: rgba(206, 22, 22, 0.25);
+}
+
+.cart-actions {
+    text-align: center;
+}
+
+.cart-button {
+    background-color: rgba(206, 22, 22, 0.66);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.cart-button:hover {
+    background-color: rgba(206, 22, 22, 0.66);
+    transform: scale(1.03);
+}
+
+.cart-button:active {
+    background-color: rgba(206, 22, 22, 1);
+    transform: scale(0.98);
+}
+
+.cleanup-cart-button {
+    background-color: rgba(206, 22, 22, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.cleanup-cart-button:hover {
+    background-color: rgba(206, 22, 22, 0.50);
+    transform: scale(1.03);
+}
+
+.cleanup-cart-button:active {
+    background-color: rgba(206, 22, 22, 1);
+    transform: scale(0.98);
 }
