@@ -16,6 +16,10 @@ body {
     white-space: normal;
 }
 
+main {
+    min-height: 100vh;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -295,14 +299,6 @@ code {
     background-color: rgba(206, 22, 22, 0.25);
 }
 
-.delivery-info {
-    margin-left: 25px;
-}
-
-.spacer {
-    height: 300px;
-}
-
 .table-title {
     text-align: center;
 }
@@ -559,4 +555,61 @@ code {
     pointer-events: none;
     border-radius: 4px;
     z-index: 1;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.preloader {
+    text-align: center;
+}
+
+.preloader-image {
+    width: 400px;
+    border-radius: 15px;
+    margin-top: 10vh;
+    box-shadow: 10px 10px 10px var(--main-red);
+}
+
+.comment {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    background-color: #fff;
+    border: 1px solid var(--main-red);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.comment h3 {
+    margin: 0 0 10px 0;
+    color: var(--text-dark);
+}
+
+.comment p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+}
+
+.comment small {
+    color: #777;
+}
+
+.error {
+    text-align: center;
+    color: var(--main-red);
+    font-size: 1.5em;
+    margin: 10vh;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgba(255, 0, 0, 0.1);
 }
