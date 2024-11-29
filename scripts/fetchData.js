@@ -18,13 +18,18 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await response.json();
             renderData(data);
         } catch (error) {
-            showError("⚠ Что-то пошло не так. Попробуйте позже.");
+            if (error instanceof TypeError) {
+                showError("⚠ Проблема с сетью. Проверьте подключение к интернету.");
+            } else if (error.message.includes("HTTP error")) {
+                showError("⚠ Ошибка при получении данных. Попробуйте позже.");
+            } else {
+                showError("⚠ Что-то пошло не так. Попробуйте позже.");
+            }
             console.error(error);
         } finally {
             preloader.style.display = "none";
         }
     };
-
 
     const renderData = (comments) => {
         comments.forEach((comment) => {
