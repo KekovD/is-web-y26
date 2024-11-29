@@ -73,14 +73,22 @@ main {
 }
 
 .dropdown__content {
-    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
     position: absolute;
     background-color: #fff;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 10px;
-    overflow: hidden;
+    pointer-events: none;
+}
+
+.dropdown__content.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .dropdown__content a {
@@ -93,10 +101,6 @@ main {
 
 .dropdown__content a:hover {
     background-color: rgba(206, 22, 22, 0.1);
-}
-
-.dropdown:hover .dropdown__content {
-    display: block;
 }
 
 .dropdown:hover > a {
