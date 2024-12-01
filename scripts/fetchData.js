@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
             preloader.style.display = "block";
             dataContainer.innerHTML = "";
 
-            await new Promise(resolve => setTimeout(resolve, 3000));
-
             const response = await fetch(url);
 
             if (!response.ok) {
@@ -52,8 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
         dataContainer.innerHTML = `<div class="error">${message}</div>`;
     };
 
-    const randomFilter = Math.floor(Math.random() * 100) + 1;
-    const apiUrl = `https://jsonplaceholder.typicode.com/comments?postId=${randomFilter}`;
+    const randomFilter = Math.random() > 0.5 ? 100 : 5;
+    const apiUrl = `https://jsonplaceholder.typicode.com/comments?id_gte=${randomFilter}`;
 
     fetchComments(apiUrl);
 });
