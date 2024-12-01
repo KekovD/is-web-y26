@@ -659,7 +659,6 @@ code {
 
 .glide__arrows {
     display: flex;
-    justify-content: space-between;
     position: absolute;
     top: 40%;
     width: 100%;
