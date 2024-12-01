@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
         dataContainer.innerHTML = `<div class="error">${message}</div>`;
     };
 
-    const randomFilter = Math.random() > 0.5 ? "?id_gte=100" : "?id_lte=5";
-    const apiUrl = `https://jsonplaceholder.typicode.com/comments${randomFilter}`;
+    const randomFilter = Math.floor(Math.random() * 100) + 1;
+    const apiUrl = `https://jsonplaceholder.typicode.com/comments?postId=${randomFilter}`;
 
     fetchComments(apiUrl);
 });
