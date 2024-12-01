@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preloader.style.display = "block";
             dataContainer.innerHTML = "";
 
-            await new Promise(resolve => setTimeout(resolve, 3000));
+            await new Promise(resolve => setTimeout(resolve, 5000));
 
             const response = await fetch(url);
 
