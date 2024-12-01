@@ -5,8 +5,12 @@
     <meta name="description" content="Vinyl Wave - интернет-магазин виниловых пластинок. Огромный выбор по выгодным ценам.">
     <meta name="keywords" content="виниловые пластинки, купить винил, винил, магазин винила">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="outlines.css">
     <title>Vinyl Wave - Виниловые Пластинки</title>
+    <link rel="stylesheet" href="outlines.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.theme.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/glide.min.js"></script>
+    <script src="scripts/glide.js" defer></script>
     <script src="scripts/loadTime.js" defer></script>
     <script src="scripts/dropdown.js" defer></script>
 </head>
@@ -33,6 +37,7 @@
             <div class="dropdown__content">
                 <a class="dropdown__link" href="pages/indie-alternative.html">Инди/Альтернатива</a>
                 <a class="dropdown__link" href="pages/fight-with-brother.html">Музыка для драки с братом</a>
+                <a class="dropdown__link" href="pages/all-products.html">Все товары</a>
             </div>
         </div>
         <a class="navigation__link" href="pages/reviews.html">Отзывы</a>
@@ -156,6 +161,23 @@
                 4800 ₽
             </div>
         </article>
+
+        <aside class="category">
+            <a href="pages/all-products.html">
+                <h4 class="category__title">Все товары</h4>
+            </a>
+        </aside>
+
+        <div class="glide product-slider">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides"></ul>
+            </div>
+
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">←</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">→</button>
+            </div>
+        </div>
     </section>
 
     <section class="table-section">
