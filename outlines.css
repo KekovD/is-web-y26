@@ -550,7 +550,6 @@ code {
     right: -2px;
     bottom: -2px;
     border: 2px solid #007bff;
-    pointer-events: none;
     border-radius: 4px;
     z-index: 1;
 }
