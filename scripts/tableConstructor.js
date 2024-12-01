@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .slice(1)
             .map(row => Array.from(row.querySelectorAll('td')).map(td => td.textContent));
 
-        const tableData = { headers, data };
+        const tableData = {headers, data};
         localStorage.setItem('savedTable', JSON.stringify(tableData));
         alert('Таблица сохранена.');
     });
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const { headers, data } = JSON.parse(savedTable);
+        const {headers, data} = JSON.parse(savedTable);
         const rows = data.length;
         const columns = headers.length;
 
@@ -145,14 +145,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const headers = document.getElementById('headers').value;
         const selectedTemplate = templatesSelect.value;
 
-        localStorage.setItem('tableParams', JSON.stringify({ rows, columns, headers, selectedTemplate }));
+        localStorage.setItem('tableParams', JSON.stringify({rows, columns, headers, selectedTemplate}));
         alert('Параметры сохранены.');
     });
 
     loadButton.addEventListener('click', () => {
         const savedParams = localStorage.getItem('tableParams');
         if (savedParams) {
-            const { rows, columns, headers, selectedTemplate } = JSON.parse(savedParams);
+            const {rows, columns, headers, selectedTemplate} = JSON.parse(savedParams);
 
             document.getElementById('rows').value = rows;
             document.getElementById('columns').value = columns;

@@ -1,4 +1,4 @@
-(function() {
+(function () {
     const calculateLoadTime = () => (performance.now() / 1000).toFixed(3);
 
     const displayLoadTime = () => {
